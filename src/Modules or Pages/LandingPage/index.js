@@ -1,12 +1,19 @@
 import Header from "./Header";
 import Slider from "./slider";
-import FeatureItem from "../../CommonComponents/FeatureItems";
+import FeatureItems from "../../CommonComponents/FeatureItems";
+import featureData from "../../constants/featuresData";
 function LandingPage() {
   return (
     <div>
-      <Header></Header>
-      {/* <Slider></Slider> */}
-      <FeatureItem></FeatureItem>
+      <Header/>
+      <Slider />
+      {featureData.map((item) => (
+        <FeatureItems data={item} />
+      ))}
+      {/* <FeatureItems></FeatureItems>
+      <FeatureItems/>
+      <FeatureItems/>
+      <FeatureItems/> */}
     </div>
   );
 }
